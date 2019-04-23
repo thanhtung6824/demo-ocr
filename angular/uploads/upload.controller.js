@@ -6,7 +6,9 @@
     uploadController.$inject = ['$scope', '$http', 'logger', '$timeout'];
 
     function uploadController($scope, $http, logger, $timeout) {
+        $scope.isChooseImage = true;
         $('#imageFile').change(function(evt) {
+            $scope.isChooseImage = false;
             var files = evt.target.files;
             var file = files[0];
             var fileSize = file.size / 1024 / 1024;
@@ -15,7 +17,7 @@
                 reader.onload = function(e) {
                     document.getElementById('previewImg').src = e.target.result;
                     $timeout(() => {
-                        if (fileSize >= 1) {
+                        if (fileSize >= 2) {
                             resizeImage();
                         } else {
                             resizeCss()
@@ -120,21 +122,20 @@
                         $scope.responseOcr = response.data;
                         let html = '';
                         if (response.data.front_flg === 0) {
-                            html += `
-                            <p><b>Mặt </b>:Mặt trước</p>
-                            <p><b>Họ tên</b>: ${response.data.name.toUpperCase()}</p>
-                            <p><b>Số CMT</b>: ${response.data.id}</p>
-                            <p><b>Ngày sinh</b>: ${response.data.birthday}</p>
-                            <p><b>Địa chỉ</b>: ${response.data.address}</p>
-                            <p><b>Giới tính</b>: ${response.data.sex}</p>
+                            html += `<p class="text-black"><b>Mặt</b>: Mặt trước</p>
+                            <p class="text-black"><b>Họ tên</b>: ${response.data.name.toUpperCase()}</p>
+                            <p class="text-black"><b>Số CMT</b>: ${response.data.id}</p>
+                            <p class="text-black"><b>Ngày sinh</b>: ${response.data.birthday}</p>
+                            <p class="text-black"><b>Địa chỉ</b>: ${response.data.address}</p>
+                            <p class="text-black"><b>Giới tính</b>: ${response.data.sex}</p>
                         `
                         } else {
                             html += `
-                            <p><b>Mặt </b>: Mặt sau</p>
-                            <p><b>Nơi cấp</b>: ${response.data.issue_at === 'N/A'
+                            <p class="text-black"><b>Mặt </b>: Mặt sau</p>
+                            <p class="text-black"><b>Nơi cấp</b>: ${response.data.issue_at === 'N/A'
                             || response.data.issue_at === null ? 'Cục Cảnh sát ĐKQL cư trú và DLQG về dân cư' : response.data.issue_at
                                 }</p>
-                            <p><b>Ngày cấp </b>: ${response.data.issue_date}</p>
+                            <p class="text-black"><b>Ngày cấp </b>: ${response.data.issue_date}</p>
                         `
                         }
                         document.getElementById("json").innerHTML = html;

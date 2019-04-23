@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+
+html{
+    padding:0px;
+    margin:0px;
+    overflow-x: hidden;
+}
+body{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0em;
+    color: #333333;
+    position: relative;
+    overflow: hidden;
+   font-family: 'Roboto Slab', serif;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a:hover, a:focus{
+    text-decoration: none !important;
+}
+img{
+    max-width: 100%;
+}
+.thumbnail{
+    padding: 0px;
+    border: none;
+    background: none;
+    margin: 0px;
+    overflow: hidden;
+}
+.row{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.container {
+    width: 100%;
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+.content_left figure {
+    text-align: center;
+    margin: 115px 0px 35px 0px;
+}
+.content_left p {
+    text-align: center;
+    color: #757575;
+    font-size: 18px;
+    line-height: 26px;
+    font-style: italic;
+}
+.content_botton {
+    background: url("../images/background.jpg") no-repeat;
+    background-size: cover;
+}
+.content_botton .experience_app h2 {
+    text-align: center;
+    font-size: 25px;
+    line-height: 35px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 55px 0px 40px 0px;
+}
+.content_botton .experience_web h2 {
+    text-align: center;
+    font-size: 25px;
+    line-height: 35px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 55px 0px 40px 0px;
+    border-top: dashed 1px #7899b9;
+}
+figure.google_play {
+    float: right;
+}
+figure.app_store {
+    float: left;
+}
+.content_botton .experience_app figure {
+    margin: 0px 0px 60px 0px;
+}
+.experience_web figure {
+    float: left;
+    margin: 0px 15px;
+}
+.experience_web ul li {
+    margin: 0px 0px 6px 0px;
+    text-align: left;
+    padding: 15px 10px 15px 10px;
+    position: relative;
+    background: rgba(6, 70, 119, 0.7);
+}
+.experience_web p {
+    color: #fff;
+    font-size: 16px;
+    margin: 0px;
+    line-height: 24px;
+}
+.footer {
+    background: rgba(1, 43, 88, 0.5);
+    margin: 50px 0px 0px 0px;
+}
+.footer p {
+    color: #fff;
+    padding: 30px 0px;
+    margin: 0px;
+    font-size: 16px;
+    float: left;
+}
+.footer .social a {
+    float: right;
+    display: table;
+    padding: 30px 5px;
+}
+.footer .social a i:hover {
+    background: #f7941e;
+}
+i.fa.fa-facebook {
+   font-size: 15px;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #172e56;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+}
+i.fa.fa-youtube-play {
+    font-size: 15px;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #172e56;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+}
+i.fa.fa-google-plus-square {
+    font-size: 15px;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #172e56;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .content_left figure {
+        text-align: center;
+        margin: 60px 0px 25px 0px;
+    }
+}
+@media (max-width: 767px) {
+    .content_left figure {
+        text-align: center;
+        margin: 20px 0px 20px 0px;
+    }
+    .content_left p {
+        font-size: 15px;
+    }
+    .content_right figure {
+        text-align: center;
+    }
+    .content_botton .experience_app h2 {
+        font-size: 18px;
+        padding: 0px;
+    }
+    .content_botton .experience_app figure {
+        margin: 0px;
+        text-align: center;
+    }
+    figure.app_store {
+        float: none;
+    }
+    figure.google_play {
+        float: none;
+    }
+    .content_botton .experience_web h2 {
+        font-size: 18px;
+        padding: 10px 0px 5px 0px;
+    }
+    .experience_web p {
+        font-size: 14px;
+    }
+    .footer {
+        margin: 10px 0px 0px 0px;
+    }
+    .footer p {
+        font-size: 14px;
+        padding: 10px 0px;
+        text-align: center;
+        float: none;
+    }
+    .social {
+        text-align: center;
+    }
+    .footer .social a {
+        padding: 5px 5px;
+        float: left;
+        display: contents;
+    }   
+}
